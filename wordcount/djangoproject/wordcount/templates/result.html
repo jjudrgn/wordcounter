@@ -1,0 +1,20 @@
+<h1>당신이 입력한 텍스트는 <!--총 단어 수-->{{total}} 로 구성되어 있습니다.</h1>
+
+<a href ="{%url 'home'%}">다시 하기</a>
+
+<br>
+<h2> 입력한 텍스트 : </h2>
+<!--입력받은 전체 텍스트-->
+{{full}}
+
+<h2> 단어 카운트 : </h2>
+<!--'단어' - '단어가 나온 횟수'-->
+<!--{{dictionary}}-->
+<br>
+{% for word, count in dictionary %}     <!--template tag-->
+
+    {{word}} : {{count}}
+    <br>
+
+{%endfor%}
+
